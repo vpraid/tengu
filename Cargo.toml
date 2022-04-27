@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "tengu-learning",
+    "tengu-algebra",
+    "tengu-tensor",
+    "tengu-neural",
+    "tengu-vision",
+    "tengu-nlp",
+]
