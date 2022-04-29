@@ -1,5 +1,5 @@
-mod storage;
+mod dimension;
 mod tensor;
 
-pub use storage::*;
+pub use dimension::*;
 pub use tensor::*;
