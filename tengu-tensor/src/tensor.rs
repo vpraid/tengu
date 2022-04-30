@@ -50,4 +50,9 @@ mod tests {
     fn dense_vector() {
         let _tensor = Tensor::from(vec![1, 2, 3]).dense(3).build();
     }
+
+    #[test]
+    fn dense_matrix() {
+        let _tensor = Tensor::from(vec![1, 2, 3, 4, 5, 6]).dense(2).dense(3).build();
+    }
 }
