@@ -34,3 +34,18 @@ impl Dimension {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_dense_dimension() {
+        let dim = Dimension::Dense { size: 10 };
+        assert_eq!(dim.size(), 10);
+        assert_eq!(dim.positions().collect::<Vec<_>>(), (0..10).collect::<Vec<_>>());
+        assert_eq!(dim.indices().collect::<Vec<_>>(), (0..10).collect::<Vec<_>>());
+        assert_eq!(dim.values(0, &[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).copied().collect::<Vec<_>>(),
+                   (0..10).collect::<Vec<_>>());
+    }
+}
